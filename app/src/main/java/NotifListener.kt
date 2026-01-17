@@ -47,6 +47,10 @@ class NotifListener : NotificationListenerService() {
         } catch (_: Throwable) { }
     }
 
+    override fun onListenerConnected() {
+        appendLine("""{"event":"listener_connected","time":"${System.currentTimeMillis()}"}""")
+    }
+
     private fun appendLine(line: String) {
         val f = File(filesDir, "notifications.jsonl")
         f.appendText(line + "\n")
