@@ -22,8 +22,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name=".NotifListener"
-            android:label="NotifListener"
+            android:name="com.example.notiflogger.NotifListener"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
             android:exported="true">
             <intent-filter>
